@@ -1,0 +1,237 @@
+.features-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+
+.features-content-1 {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    background-color: #e63b27;
+    padding: 3rem 10rem;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.features-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    width: 35%;
+}
+
+.features-info-container {
+    max-width: 600px;
+    margin-top: 1rem;
+    letter-spacing: 0.25px;
+}
+
+.features-info-title {
+    font-size: 14px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.features-primary-button {
+    padding: 0.6rem 1.5rem;
+    background-color: white;
+    color: #343232;
+    border: 2px solid #343232;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-right: 1rem;
+}
+
+.features-primary-button:hover {
+    background-color: #343232;
+    color: white;
+}
+
+.features-secondary-button {
+    padding: 0.6rem 1.5rem;
+    background-color: #3432325e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-right: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.features-secondary-button:hover {
+    background-color: #343232;
+}
+
+.features-content-2 {
+    padding: 3rem 7rem;
+    color: white;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.features-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 0.25px;}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.w-64 {
+    width: 16rem;
+}
+
+.h-40 {
+    height: 10rem;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    margin-top: 1rem;
+    position: relative;
+    height: 160px;
+}
+
+.carousel-track {
+    display: flex;
+    animation: slide 30s linear infinite;
+    width: calc(200%);
+    gap: 4rem;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+.carousel-image {
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 12px;
+    max-width: 220px;
+    opacity: 0.5;
+    box-shadow: 5px 5px 6px #343232;
+}
+
+.carousel-image:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+
+
+.features-content-3 {
+    display: flex;
+    padding: 5rem 7rem;
+    background: white;
+    gap: 8rem;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+.features-text-info {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+
+}
+
+.features-content-3-header-title {
+    font-size: 12px;
+}
+
+.features-content-3-title {
+    font-size: 36px;
+}
+
+.features-content-3-subtitle {
+    font-size: 16px;
+}
+
+.features-content-3-container-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.features-content-3-primary-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 12px;
+    border: none;
+    font-weight: 700;
+    color: white;
+    background: #ff0d0d;
+    box-shadow: 0px 1px 0px 1px #cd0303;
+}
+
+.features-content-3-secondary-btn {
+    background: #ebebeb;
+    color: black;
+    font-weight: 700;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 0px 1px #e2e2e2;
+    letter-spacing: 0.25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.features-img-container {
+    height: 300px;
+    border-radius: 39px;
+    overflow: hidden;
+}
+
+.features-img-container img {
+    max-height: 100%;
+}

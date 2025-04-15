@@ -1,0 +1,62 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5rem;
+    background: #F8F8F8;
+}
+
+.nav-logo {
+    width: 100px;
+}
+
+.nav-logo img {
+    max-width: 100%;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+
+.nav-text {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: 400;}
+
+.btn-contact {
+    background: #ebebeb;
+    color: black;
+    font-weight: 700;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 0px 1px #e2e2e2;
+    letter-spacing: 0.25px;
+}
+
+.btn-orders {
+    background: #ff0d0d;
+    color: white;
+    font-weight: 700;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 1px 0px 1px #cd0303;
+    letter-spacing: 0.25px;
+}
