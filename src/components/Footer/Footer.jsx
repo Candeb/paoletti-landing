@@ -75,7 +75,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 Paoletti Mayoristas. Todos los derechos reservados.</p>
+        <p>© 2025 José V Paoletti y Cía SRL. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

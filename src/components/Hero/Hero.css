@@ -1,10 +1,9 @@
 .hero-container {
     background: #F8F8F8;
-    padding: 3rem 7rem;
+    padding: 3rem 7rem 7rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-bottom: 5rem;
 }
 
 .hero-content {
