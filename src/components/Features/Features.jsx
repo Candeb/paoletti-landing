@@ -49,6 +49,18 @@ const Features = () => {
     <img src={brandImage10} alt="img4" className="carousel-image" />
     <img src={brandImage11} alt="img1" className="carousel-image" />
     <img src={brandImage12} alt="img2" className="carousel-image" />
+    <img src={brandImage1} alt="img1" className="carousel-image" />
+    <img src={brandImage2} alt="img2" className="carousel-image" />
+    <img src={brandImage3} alt="img3" className="carousel-image" />
+    <img src={brandImage4} alt="img4" className="carousel-image" />
+    <img src={brandImage5} alt="img1" className="carousel-image" />
+    <img src={brandImage6} alt="img2" className="carousel-image" />
+    <img src={brandImage7} alt="img1" className="carousel-image" />
+    <img src={brandImage8} alt="img2" className="carousel-image" />
+    <img src={brandImage9} alt="img3" className="carousel-image" />
+    <img src={brandImage10} alt="img4" className="carousel-image" />
+    <img src={brandImage11} alt="img1" className="carousel-image" />
+    <img src={brandImage12} alt="img2" className="carousel-image" />
   </div>
 </div>
 
