@@ -17,6 +17,13 @@ import { FaWhatsapp } from "react-icons/fa";
 
 
 const Features = () => {
+
+  const brandImages = [
+    brandImage1, brandImage2, brandImage3, brandImage4, brandImage5, brandImage6,
+    brandImage7, brandImage8, brandImage9, brandImage10, brandImage11, brandImage12
+  ];
+
+  
   return (
     <div className='features-container'>
       <div className='features-content-1'>
@@ -37,32 +44,12 @@ const Features = () => {
 
   <div className="carousel-wrapper">
   <div className="carousel-track">
-    <img src={brandImage1} alt="img1" className="carousel-image" />
-    <img src={brandImage2} alt="img2" className="carousel-image" />
-    <img src={brandImage3} alt="img3" className="carousel-image" />
-    <img src={brandImage4} alt="img4" className="carousel-image" />
-    <img src={brandImage5} alt="img1" className="carousel-image" />
-    <img src={brandImage6} alt="img2" className="carousel-image" />
-    <img src={brandImage7} alt="img1" className="carousel-image" />
-    <img src={brandImage8} alt="img2" className="carousel-image" />
-    <img src={brandImage9} alt="img3" className="carousel-image" />
-    <img src={brandImage10} alt="img4" className="carousel-image" />
-    <img src={brandImage11} alt="img1" className="carousel-image" />
-    <img src={brandImage12} alt="img2" className="carousel-image" />
-    <img src={brandImage1} alt="img1" className="carousel-image" />
-    <img src={brandImage2} alt="img2" className="carousel-image" />
-    <img src={brandImage3} alt="img3" className="carousel-image" />
-    <img src={brandImage4} alt="img4" className="carousel-image" />
-    <img src={brandImage5} alt="img1" className="carousel-image" />
-    <img src={brandImage6} alt="img2" className="carousel-image" />
-    <img src={brandImage7} alt="img1" className="carousel-image" />
-    <img src={brandImage8} alt="img2" className="carousel-image" />
-    <img src={brandImage9} alt="img3" className="carousel-image" />
-    <img src={brandImage10} alt="img4" className="carousel-image" />
-    <img src={brandImage11} alt="img1" className="carousel-image" />
-    <img src={brandImage12} alt="img2" className="carousel-image" />
+    {[...brandImages, ...brandImages].map((image, index) => (
+      <img key={index} src={image} alt={`brand-${index}`} className="carousel-image" />
+    ))}
   </div>
 </div>
+
 
 </div>
 
