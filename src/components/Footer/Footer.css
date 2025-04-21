@@ -19,36 +19,45 @@
 .footer-form h3 {
     font-size: 22px;
     letter-spacing: 0.25px;
-    font-weight: 500;   
+    font-weight: 500;
 }
 
 .footer-form input,
 .footer-form textarea {
-    width: 100%;
+    width: 48%;
     padding: 12px;
     border: none;
-    border-radius: 6px;
-    font-size: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-family: 'Public Sans', sans-serif;
+
+}
+
+.footer-form input:focus-visible,
+.footer-form textarea:focus-visible {
+    outline: none;
 }
 
 .footer-form textarea {
-    min-height: 100px;
-    resize: vertical;
+    resize: none;
+    width: 100%;
+    min-height: 70px;
 }
 
 .footer-form button {
-    padding: 0.8rem 2rem;
-    background-color: #f7931e;
+    padding: 0.6rem 1.5rem;
+    border-radius: 10px;
     border: none;
-    border-radius: 6px;
-    color: #fff;
-    font-weight: bold;
+    font-weight: 700;
+    color: white;
+    background: #ff0d0d;
+    box-shadow: 0px 1px 0px 1px #cd0303;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.5s ease-in-out;
 }
 
 .footer-form button:hover {
-    background-color: #dd7d0d;
+    background-color: #cd0303;
 }
 
 .footer-links {
@@ -137,23 +146,30 @@
 
 .footer-form-info {
     display: flex;
-    gap: 1rem;
+    gap: 12px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer-form-contact form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 12px;
+    align-items: flex-end;
 }
 
 .footer-form-contact {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+
 }
 
 .footer-form-contact img {
-    height: 250px;
+    height: 260px;
+    box-shadow: 5px 5px 6px black;
+    border-radius: 1rem;
 }
 
 .footer-form-contact {
@@ -164,25 +180,32 @@
     transform-origin: top;
     transform: scaleY(0);
     padding: 2rem 0;
-  }
-  
-  .footer-form-contact.open {
-    max-height: 800px; 
+    width: 97%;
+}
+
+.footer-form-contact-title {
+    width: 100%;
+    text-align: left;
+    font-size: 15px;
+    letter-spacing: 0.25px;
+}
+
+.footer-form-contact.open {
+    max-height: 800px;
     opacity: 1;
     transform: scaleY(1);
-  }
-  
-  .footer-form-toggle {
+}
+
+.footer-form-toggle {
     cursor: pointer;
     display: flex;
-   gap: 2rem;
+    gap: 2rem;
     align-items: center;
 
-    border-radius: 4px;
     transition: color 0.3s ease;
     color: #cccccc94;
-  }
-  
+}
+
 .footer-form-toggle:hover {
     color: white;
 }
@@ -193,5 +216,20 @@
 
 .footer-form-toggle.open {
     color: white;
-  }
-  
+}
+
+
+.success-message-title {
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.success-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}

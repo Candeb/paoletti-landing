@@ -17,6 +17,7 @@ const Footer = () => {
     consulta: '',
   });
   const [showForm, setShowForm] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,11 +31,24 @@ const Footer = () => {
       formData,
       'urHpUukTbE14qPpwM'
     )
-      .then(() => alert('Mensaje enviado con éxito!'))
+      .then(() => {
+        setEmailSent(true);
+      })
       .catch(err => {
         console.error(err);
-        alert('Hubo un error al enviar el mensaje.');
+        alert('There was an error sending the message.');
       });
+  };
+
+  const handleBackToForm = () => {
+    setEmailSent(false);
+    setFormData({
+      nombre: '',
+      email: '',
+      localidad: '',
+      telefono: '',
+      consulta: '',
+    });
   };
 
   return (
@@ -56,7 +70,16 @@ const Footer = () => {
 
             <div className={`footer-form-contact ${showForm ? 'open' : ''}`}>
               <img src={teleVentas} alt="Televentas" />
-              <form onSubmit={handleSubmit}>
+
+
+
+              {emailSent ? (
+                <div className="success-message">
+                  <p className='success-message-title'>Your message was sent successfully!</p>
+                  <button onClick={handleBackToForm}>Back to form</button>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit}>
                 <p className='footer-form-contact-title'>Estamos para ayudarte. Contactanos.</p>
                 <div className='footer-form-info'>
                   <input type="text" name="nombre" placeholder="Nombre y Apellido" onChange={handleChange} required />
@@ -67,6 +90,9 @@ const Footer = () => {
                 <textarea name="consulta" placeholder="Tu consulta..." onChange={handleChange} required />
                 <button type="submit">Enviar</button>
               </form>
+              )}
+
+
             </div>
 
           </div>

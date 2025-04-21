@@ -9,7 +9,7 @@
     align-items: center;
     gap: 5rem;
     background-color: #e63b27;
-    padding: 3rem 10rem;
+    padding: 3rem 10rem 4rem;
     color: white;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +67,7 @@
 }
 
 .features-secondary-button:hover {
-    background-color: #343232;
+    background-color: black;
 }
 
 .features-content-2 {
