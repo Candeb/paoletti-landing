@@ -1,42 +1,44 @@
 import React from 'react'
 import "./About.css"
-import teleVentas from '../../assets/about/televentas.png';
-import imgOrders from '../../assets/about/inst03.png';
-import deposito from '../../assets/about/deposito.jpg'
-
+import televentas2 from '../../assets/about/televentas2.png';
+import family from '../../assets/about/family.png'
+import warehouse from '../../assets/about/warehouse.png'
 
 
 const About = () => {
   return (
-    <div className='about-container'>
+    <div className='about-container' id='about-us'>
       <div className='about-content'>
-        <h3 className='about-title'> Conectando a los mejores proveedores con los minoristas de confianza. </h3>
+        <h3 className='about-title'>Desde 1962, construyendo confianza y crecimiento junto a nuestros clientes.</h3>
         <div className='about-info-container'>
+
           <div className='about-card-info'>
-            <img src={deposito} alt="Logo Paoletti" />
-
-            <p className='about-card-title'>Comprometidos con la calidad y el servicio al cliente excepcional.</p>
-            <p className='about-card-subtitle'>Nuestra historia se centra en ofrecer productos de calidad a precios competitivos.</p>
-
+            <img src={family} alt="Depósito" />
+            <p className='about-card-title'>Más de 60 años de experiencia en el rubro.</p>
+            <p className='about-card-subtitle'>
+              Iniciamos con una bicicleta recorriendo Tafí Viejo. Hoy, somos una empresa consolidada con múltiples sucursales en el NOA.
+            </p>
           </div>
+
           <div className='about-card-info'>
-            <img src={imgOrders} alt="Logo Paoletti" />
-
-            <p className='about-card-title'>Comprometidos con la calidad y el servicio al cliente excepcional.</p>
-            <p className='about-card-subtitle'>Nuestra historia se centra en ofrecer productos de calidad a precios competitivos.</p>
-
+            <img src={warehouse} alt="Pedidos" />
+            <p className='about-card-title'>Relaciones sólidas con grandes marcas.</p>
+            <p className='about-card-subtitle'>
+              Distribuidores oficiales de Arcor, Eveready, Gilette, Massalin y más. Nuestra red de abastecimiento crece con cada década.
+            </p>
           </div>
+
           <div className='about-card-info'>
-            <img src={teleVentas} alt="Logo Paoletti" />
-
-            <p className='about-card-title'>Visión: ser el líder en distribución mayorista en nuestra región.</p>
-            <p className='about-card-subtitle'>Nos esforzamos por construir relaciones sólidas con nuestros clientes y proveedores.</p>
-
+            <img src={televentas2} alt="Televentas" />
+            <p className='about-card-title'>Visión de futuro, con raíces familiares.</p>
+            <p className='about-card-subtitle'>
+              De generación en generación, seguimos apostando por la innovación, la sostenibilidad y el servicio personalizado.
+            </p>
           </div>
+
         </div>
-
-
       </div>
+
     </div>
   )
 }

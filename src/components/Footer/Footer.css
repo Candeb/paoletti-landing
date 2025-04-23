@@ -2,6 +2,11 @@
     background-color: #343232;
     color: #fff;
     padding: 2rem 5rem;
+
+    @media (max-width: 768px) {
+        padding: 3rem 2rem;
+
+     }
 }
 
 .footer-content {
@@ -9,12 +14,14 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 3rem;
+
+    @media (max-width: 768px) {
+       gap: 0;
+
+     }
 }
 
-.footer-form {
-    flex: 1;
-    min-width: 280px;
-}
+
 
 .footer-form h3 {
     font-size: 22px;
@@ -30,6 +37,12 @@
     border-radius: 10px;
     font-size: 13px;
     font-family: 'Public Sans', sans-serif;
+
+    @media (max-width: 768px) {
+      width: 100%;
+     }
+
+    
 
 }
 
@@ -51,20 +64,40 @@
     font-weight: 700;
     color: white;
     background: #ff0d0d;
-    box-shadow: 0px 1px 0px 1px #cd0303;
+    box-shadow: 0px 4px 0px #cd0303;
+    transition: all 0.1s ease-in-out;
     cursor: pointer;
-    transition: background-color 0.5s ease-in-out;
 }
 
-.footer-form button:hover {
-    background-color: #cd0303;
-}
+.footer-form button:not(.disabled-button):hover {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 0px #a00202;
+  }
+  
+  .footer-form button:not(.disabled-button):active {
+    transform: translateY(4px);
+    box-shadow: 0px 0px 0px #6a0101;
+  }
+  
+
+  .footer-form-contact form button.disabled-button {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
 
 .footer-links {
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
     gap: 4rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+        align-items: flex-start;
+        }
 }
 
 .footer-links nav,
@@ -77,6 +110,11 @@
 
 .footer-logo {
     height: 120px;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+       height: 90px;
+       }
 
 }
 
@@ -93,7 +131,8 @@
 }
 
 .footer-links a,
-.container-phone a {
+.container-phone a,
+.footer-contact {
     text-decoration: none;
     color: #cccccc94;
     transition: color 0.3s ease;
@@ -101,10 +140,12 @@
     display: flex;
     align-items: center;
     gap: 6px;
+    cursor: pointer;
 }
 
 .footer-links a:hover,
-.container-phone a:hover {
+.container-phone a:hover,
+.footer-contact:hover {
     color: #fff;
 }
 
@@ -135,6 +176,11 @@
     justify-content: space-between;
     flex-direction: row-reverse;
     align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 3rem;
+        }
 }
 
 
@@ -170,6 +216,10 @@
     height: 260px;
     box-shadow: 5px 5px 6px black;
     border-radius: 1rem;
+
+        @media (max-width: 768px) {
+     display: none;
+    }
 }
 
 .footer-form-contact {
@@ -212,6 +262,10 @@
 
 .footer-form-container {
     padding: 1rem 5rem;
+
+    @media (max-width: 768px) {
+        padding: 0
+     }
 }
 
 .footer-form-toggle.open {

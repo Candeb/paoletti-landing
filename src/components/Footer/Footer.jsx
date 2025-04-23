@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import emailjs from 'emailjs-com';
 import './Footer.css';
 import logo from '../../assets/logo-paoletti.png';
@@ -18,6 +18,18 @@ const Footer = () => {
   });
   const [showForm, setShowForm] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  useEffect(() => {
+    const { nombre, email, localidad, telefono, consulta } = formData;
+
+    // Validación básica: que estén llenos los campos requeridos
+    if (nombre.trim() && email.trim() && localidad.trim() && telefono.trim() && consulta.trim()) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
+  }, [formData]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -53,7 +65,7 @@ const Footer = () => {
 
   return (
     <footer className="footer-container">
-      <div className="footer-content">
+      <div className="footer-content" id="footer">
         <div className='footer-form-container'>
 
 
@@ -80,16 +92,22 @@ const Footer = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
-                <p className='footer-form-contact-title'>Estamos para ayudarte. Contactanos.</p>
-                <div className='footer-form-info'>
-                  <input type="text" name="nombre" placeholder="Nombre y Apellido" onChange={handleChange} required />
-                  <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-                  <input type="text" name="localidad" placeholder="Localidad" onChange={handleChange} />
-                  <input type="text" name="telefono" placeholder="Teléfono" onChange={handleChange} />
-                </div>
-                <textarea name="consulta" placeholder="Tu consulta..." onChange={handleChange} required />
-                <button type="submit">Enviar</button>
-              </form>
+                  <p className='footer-form-contact-title'>Estamos para ayudarte. Contactanos.</p>
+                  <div className='footer-form-info'>
+                    <input type="text" name="nombre" placeholder="Nombre y Apellido" onChange={handleChange} required />
+                    <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
+                    <input type="text" name="localidad" placeholder="Localidad" onChange={handleChange} />
+                    <input type="text" name="telefono" placeholder="Teléfono" onChange={handleChange} />
+                  </div>
+                  <textarea name="consulta" placeholder="Tu consulta..." onChange={handleChange} required />
+                  <button
+                    type="submit"
+                    disabled={!isFormValid}
+                    className={!isFormValid ? 'disabled-button' : ''}
+                  >
+                    Enviar
+                  </button>
+                </form>
               )}
 
 
@@ -101,8 +119,13 @@ const Footer = () => {
         <div className='footer-content-links'>
 
 
+          <img src={logo} alt="Logo Paoletti" className="footer-logo" onClick={() => {
+            const footer = document.getElementById("home");
+            if (footer) {
+              footer.scrollIntoView({ behavior: "smooth" });
+            }
+          }} />
 
-          <img src={logo} alt="Logo Paoletti" className="footer-logo" />
 
           <div className="footer-links">
 
@@ -110,7 +133,7 @@ const Footer = () => {
               <p className="title-footer">Menú</p>
               <ul>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
                 <li><a href="/marcas">Marcas</a></li>
               </ul>
             </nav>
@@ -121,8 +144,8 @@ const Footer = () => {
             <div className='container-phone'>
               <p className="title-footer">Atencion al cliente </p>
               <ul>
-                <li><a href="/"> Ventas: 3814190206 <FaWhatsapp /></a></li>
-                <li><a href="/sobre-nosotros"> Admin: 3815052973 <FaWhatsapp /></a></li>
+                <li className='footer-contact' onClick={() => window.open('https://wa.me/3814190206', '_blank')}> Ventas: 3814190206 <FaWhatsapp /></li>
+                <li className='footer-contact' onClick={() => window.open('https://wa.me/3815052973', '_blank')}>  Admin: 3815052973 <FaWhatsapp /></li>
               </ul>
 
             </div>
@@ -133,13 +156,13 @@ const Footer = () => {
                 <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
                   <IoLogoInstagram />
                 </a>
-                <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+                <a href="https://www.facebook.com/profile.php?id=100063524224201&sk=photos&locale=es_LA" target="_blank" rel="noreferrer">
                   <IoLogoFacebook />
                 </a>
                 <a href="https://wa.me/5491112345678" target="_blank" rel="noreferrer">
                   <IoLogoYoutube />
                 </a>
-                <a href="https://wa.me/5491112345678" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/distribuidora-paoletti-srl-46bb3554/" target="_blank" rel="noreferrer">
                   <IoLogoLinkedin />
                 </a>
 
