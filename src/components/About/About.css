@@ -5,9 +5,14 @@
     justify-content: flex-start;
     align-items: center;
     display: flex;
+    scroll-margin-top: 107px;
 
     @media (max-width: 768px) {
         padding: 3rem 2rem;
+
+       scroll-margin-top: 80px; 
+    
+        
     }
 }
 

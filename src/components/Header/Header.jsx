@@ -13,8 +13,8 @@ const Header = () => {
           src={logo}
           alt="Logo Paoletti"
           onClick={() => {
-            const home = document.getElementById("home");
-            if (home) home.scrollIntoView({ behavior: "smooth" });
+            const inicio = document.getElementById("inicio");
+            if (inicio) inicio.scrollIntoView({ behavior: "smooth" });
           }}
         />
       </div>
@@ -23,11 +23,21 @@ const Header = () => {
         {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </div>
 
+      {isMenuOpen && <div className="menu-overlay" onClick={() => setIsMenuOpen(false)}></div>}
+
+
       <nav className={`nav-container ${isMenuOpen ? 'open' : ''}`}>
         <ul className="nav-menu">
-          <li><a href="/" className='nav-text'>Inicio</a></li>
-          <li><a href="#about-us" className='nav-text'>Sobre nosotros</a></li>
-          <li><a href="#marcas" className='nav-text'>Marcas</a></li>
+          <li>
+            <a href="#inicio" className='nav-text' onClick={() => setIsMenuOpen(false)}>Inicio</a>
+          </li>
+          <li>
+            <a href="#sobre-nosotros" className='nav-text' onClick={() => setIsMenuOpen(false)}>Sobre nosotros</a>
+          </li>
+          <li>
+            <a href="#marcas" className='nav-text' onClick={() => setIsMenuOpen(false)}>Marcas</a>
+          </li>
+
         </ul>
 
         <div className="nav-buttons">
@@ -36,6 +46,7 @@ const Header = () => {
             onClick={() => {
               const footer = document.getElementById("footer");
               if (footer) footer.scrollIntoView({ behavior: "smooth" });
+              setIsMenuOpen(false)
             }}
           >
             Contacto
@@ -43,7 +54,9 @@ const Header = () => {
 
           <button
             className="btn-orders"
-            onClick={() => window.location.href = 'https://secure.sig2k.com/webs/paoletti@sigma-ar.defaultKart/sigkart/3.1/'}
+            onClick={() => window.location.href = 'https://secure.sig2k.com/webs/paoletti@sigma-ar.defaultKart/sigkart/3.1/'
+
+            }
           >
             Pedidos
           </button>

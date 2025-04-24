@@ -31,7 +31,7 @@ const Features = () => {
 
   return (
     <div className='features-container' >
-      <div className='features-content-1' >
+      <div className='features-content-1'  >
 
         <h3 className='features-title'> Podes hacer tus pedidos fácil y rápido aqui</h3>
         <div className='features-info-container'>
@@ -61,7 +61,7 @@ const Features = () => {
 
 
 
-      <div className='features-content-2' id='marcas' >
+      <div className='features-content-2' >
         <p className='features-subtitle'>Alianzas con marcas líderes del mercado</p>
 
         <div className="carousel-wrapper">
@@ -75,7 +75,7 @@ const Features = () => {
 
       </div>
 
-      <div className='features-content-3'>
+      <div className='features-content-3' id='marcas' >
         <div className='features-text-info'>
           <p className='features-content-3-hedaer-title'> Compromiso </p>
           <h4 className='features-content-3-title'>Estamos para ayudarte en cada paso</h4>
@@ -83,15 +83,15 @@ const Features = () => {
             Siempre estamos cerca para ayudarte. </strong>
           </p>
           <div className='features-content-3-container-buttons'>
-            <button className='features-content-3-primary-btn' onClick={() => window.location.href = 'https://secure.sig2k.com/webs/paoletti@sigma-ar.defaultKart/sigkart/3.1/'} ><HiShoppingCart /> Hacer pedido</button>
+            <button className='features-content-3-primary-btn' onClick={() => window.location.href = 'https://secure.sig2k.com/webs/paoletti@sigma-ar.defaultKart/sigkart/3.1/'} ><HiShoppingCart style={{fontSize:"1rem"}}/> Hacer pedido</button>
             <button
               className='features-content-3-secondary-btn'
               onClick={() => window.open('https://wa.me/3814190206', '_blank')}>
-              <FaWhatsapp /> Contactarse con Ventas
+              <FaWhatsapp style={{fontSize:"1rem"}}/> Contactarse con Ventas
 
             </button>
             <button className='features-content-3-secondary-btn' onClick={() => window.open('https://wa.me/3815052973', '_blank')}>
-              <FaWhatsapp /> Contactarse con Administración
+              <FaWhatsapp style={{fontSize:"1rem"}}/> Contactarse con Administración
             </button>
 
 

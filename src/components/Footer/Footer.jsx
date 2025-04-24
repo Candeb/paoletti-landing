@@ -119,11 +119,9 @@ const Footer = () => {
         <div className='footer-content-links'>
 
 
-          <img src={logo} alt="Logo Paoletti" className="footer-logo" onClick={() => {
-            const footer = document.getElementById("home");
-            if (footer) {
-              footer.scrollIntoView({ behavior: "smooth" });
-            }
+          <img src={logo} alt="Logo Paoletti" className="footer-logo"    onClick={() => {
+            const inicio = document.getElementById("inicio");
+            if (inicio) inicio.scrollIntoView({ behavior: "smooth" });
           }} />
 
 
@@ -132,9 +130,9 @@ const Footer = () => {
             <nav>
               <p className="title-footer">Menú</p>
               <ul>
-                <li><a href="/">Inicio</a></li>
-                <li><a href="/sobre-nosotros">Sobre nosotros</a></li>
-                <li><a href="/marcas">Marcas</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+                <li><a href="#marcas">Marcas</a></li>
               </ul>
             </nav>
 

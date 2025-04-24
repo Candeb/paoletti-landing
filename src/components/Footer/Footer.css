@@ -2,6 +2,7 @@
     background-color: #343232;
     color: #fff;
     padding: 2rem 5rem;
+    scroll-margin-top: 107px;
 
     @media (max-width: 768px) {
         padding: 3rem 2rem;

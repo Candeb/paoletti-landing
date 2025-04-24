@@ -7,7 +7,7 @@ import warehouse from '../../assets/about/warehouse.png'
 
 const About = () => {
   return (
-    <div className='about-container' id='about-us'>
+    <div className='about-container' id='sobre-nosotros'>
       <div className='about-content'>
         <h3 className='about-title'>Desde 1962, construyendo confianza y crecimiento junto a nuestros clientes.</h3>
         <div className='about-info-container'>
