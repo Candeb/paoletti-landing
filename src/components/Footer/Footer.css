@@ -7,7 +7,7 @@
     @media (max-width: 768px) {
         padding: 3rem 2rem;
         scroll-margin-top: 80px;
-     }
+    }
 }
 
 .footer-content {
@@ -17,9 +17,9 @@
     gap: 3rem;
 
     @media (max-width: 768px) {
-       gap: 0;
+        gap: 0;
 
-     }
+    }
 }
 
 
@@ -40,10 +40,10 @@
     font-family: 'Public Sans', sans-serif;
 
     @media (max-width: 768px) {
-      width: 100%;
-     }
+        width: 100%;
+    }
 
-    
+
 
 }
 
@@ -68,23 +68,27 @@
     box-shadow: 0px 4px 0px #cd0303;
     transition: all 0.1s ease-in-out;
     cursor: pointer;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-form button:not(.disabled-button):hover {
     transform: translateY(2px);
     box-shadow: 0px 2px 0px #a00202;
-  }
-  
-  .footer-form button:not(.disabled-button):active {
+}
+
+.footer-form button:not(.disabled-button):active {
     transform: translateY(4px);
     box-shadow: 0px 0px 0px #6a0101;
-  }
-  
+}
 
-  .footer-form-contact form button.disabled-button {
+
+.footer-form-contact form button.disabled-button {
     opacity: 0.5;
     cursor: not-allowed;
-  }
+}
 
 
 .footer-links {
@@ -98,7 +102,7 @@
         width: 100%;
         gap: 1rem;
         align-items: flex-start;
-        }
+    }
 }
 
 .footer-links nav,
@@ -114,8 +118,8 @@
     cursor: pointer;
 
     @media (max-width: 768px) {
-       height: 90px;
-       }
+        height: 90px;
+    }
 
 }
 
@@ -181,7 +185,7 @@
     @media (max-width: 768px) {
         flex-direction: column;
         gap: 3rem;
-        }
+    }
 }
 
 
@@ -218,8 +222,8 @@
     box-shadow: 5px 5px 6px black;
     border-radius: 1rem;
 
-        @media (max-width: 768px) {
-     display: none;
+    @media (max-width: 768px) {
+        display: none;
     }
 }
 
@@ -266,7 +270,7 @@
 
     @media (max-width: 768px) {
         padding: 0
-     }
+    }
 }
 
 .footer-form-toggle.open {
@@ -287,4 +291,21 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+}
+
+
+.spinner {
+    animation: spin 1s linear infinite;
+    font-size: 20px;
+    /* Ajustalo al tamaño que prefieras */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

@@ -7,6 +7,8 @@ import { IoLogoFacebook } from "react-icons/io";
 import { IoLogoYoutube, IoLogoInstagram, IoLogoLinkedin } from "react-icons/io";
 import teleVentas from '../../assets/about/televentas.png';
 import { IoChevronDown, IoChevronUp } from 'react-icons/io5';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 const Footer = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +21,8 @@ const Footer = () => {
   const [showForm, setShowForm] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
   const [isFormValid, setIsFormValid] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
 
   useEffect(() => {
     const { nombre, email, localidad, telefono, consulta } = formData;
@@ -37,6 +41,8 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true); // <- empieza la carga
+
     emailjs.send(
       'service_k5e0j9p',
       'template_8d8qs4f',
@@ -44,13 +50,16 @@ const Footer = () => {
       'urHpUukTbE14qPpwM'
     )
       .then(() => {
+        setIsLoading(false); // <- termina la carga
         setEmailSent(true);
       })
       .catch(err => {
+        setIsLoading(false); // <- termina la carga aunque haya error
         console.error(err);
-        alert('There was an error sending the message.');
+        alert('Hubo un error enviando el mensaje.');
       });
   };
+
 
   const handleBackToForm = () => {
     setEmailSent(false);
@@ -87,8 +96,8 @@ const Footer = () => {
 
               {emailSent ? (
                 <div className="success-message">
-                  <p className='success-message-title'>Your message was sent successfully!</p>
-                  <button onClick={handleBackToForm}>Back to form</button>
+                  <p className='success-message-title'>Tu consulta fue enviada con éxito</p>
+                  <button onClick={handleBackToForm}>Volver</button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit}>
@@ -102,11 +111,12 @@ const Footer = () => {
                   <textarea name="consulta" placeholder="Tu consulta..." onChange={handleChange} required />
                   <button
                     type="submit"
-                    disabled={!isFormValid}
+                    disabled={!isFormValid || isLoading}
                     className={!isFormValid ? 'disabled-button' : ''}
                   >
-                    Enviar
+                    {isLoading ? <FontAwesomeIcon icon={faCircleNotch} spin /> : 'Enviar'}
                   </button>
+
                 </form>
               )}
 
@@ -119,7 +129,7 @@ const Footer = () => {
         <div className='footer-content-links'>
 
 
-          <img src={logo} alt="Logo Paoletti" className="footer-logo"    onClick={() => {
+          <img src={logo} alt="Logo Paoletti" className="footer-logo" onClick={() => {
             const inicio = document.getElementById("inicio");
             if (inicio) inicio.scrollIntoView({ behavior: "smooth" });
           }} />
