@@ -182,7 +182,7 @@
     flex-direction: row-reverse;
     align-items: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         flex-direction: column;
         gap: 3rem;
     }
@@ -222,7 +222,7 @@
     box-shadow: 5px 5px 6px black;
     border-radius: 1rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1220px) {
         display: none;
     }
 }

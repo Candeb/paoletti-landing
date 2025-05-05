@@ -83,15 +83,15 @@ const Features = () => {
             Siempre estamos cerca para ayudarte. </strong>
           </p>
           <div className='features-content-3-container-buttons'>
-            <button className='features-content-3-primary-btn' onClick={() => window.location.href = 'https://secure.sig2k.com/webs/paoletti@sigma-ar.defaultKart/sigkart/3.1/'} ><HiShoppingCart style={{fontSize:"1rem"}}/> Hacer pedido</button>
+            <button className='features-content-3-primary-btn' onClick={() => window.location.href = 'https://secure.sig2k.com/webs/paoletti@sigma-ar.defaultKart/sigkart/3.1/'} ><HiShoppingCart className="icon-button"/> Hacer pedido</button>
             <button
               className='features-content-3-secondary-btn'
               onClick={() => window.open('https://wa.me/3814190206', '_blank')}>
-              <FaWhatsapp style={{fontSize:"1rem"}}/> Contactarse con Ventas
+              <FaWhatsapp className="icon-button"/> Contactarse con Ventas
 
             </button>
             <button className='features-content-3-secondary-btn' onClick={() => window.open('https://wa.me/3815052973', '_blank')}>
-              <FaWhatsapp style={{fontSize:"1rem"}}/> Contactarse con Administración
+              <FaWhatsapp className="icon-button" /> Contactarse con Administración
             </button>
 
 
