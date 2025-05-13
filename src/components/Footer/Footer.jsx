@@ -27,7 +27,6 @@ const Footer = () => {
   useEffect(() => {
     const { nombre, email, localidad, telefono, consulta } = formData;
 
-    // Validación básica: que estén llenos los campos requeridos
     if (nombre.trim() && email.trim() && localidad.trim() && telefono.trim() && consulta.trim()) {
       setIsFormValid(true);
     } else {
@@ -41,10 +40,10 @@ const Footer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsLoading(true); // <- empieza la carga
+    setIsLoading(true); 
 
     emailjs.send(
-      'service_k5e0j9p',
+      'service_77cr6zh',
       'template_8d8qs4f',
       formData,
       'urHpUukTbE14qPpwM'
