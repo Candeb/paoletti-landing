@@ -2,7 +2,6 @@ import React from 'react'
 import "./Features.css"
 import logo from '../../assets/logo-large.png';
 import brandImage1 from '../../assets/marcas/1.png';
-import brandImage2 from '../../assets/marcas/2.png';
 import brandImage3 from '../../assets/marcas/3.png';
 import brandImage4 from '../../assets/marcas/4.png';
 import brandImage5 from '../../assets/marcas/5.png';
@@ -24,7 +23,6 @@ const Features = () => {
     brandImage1,
     brandImage12,
     brandImage9,
-    brandImage2,
     brandImage4,
   ];
 

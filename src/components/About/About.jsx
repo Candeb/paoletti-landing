@@ -24,7 +24,7 @@ const About = () => {
             <img src={warehouse} alt="Pedidos" />
             <p className='about-card-title'>Relaciones sólidas con grandes marcas.</p>
             <p className='about-card-subtitle'>
-              Distribuidores oficiales de Arcor, Eveready, Gilette, Massalin y más. Nuestra red de abastecimiento crece con cada década.
+              Distribuidores oficiales de Arcor, Swift, DREAMCO, Gilette, Massalin y más. Nuestra red de abastecimiento crece con cada década.
             </p>
           </div>
 

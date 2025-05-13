@@ -50,11 +50,11 @@ const Footer = () => {
       'urHpUukTbE14qPpwM'
     )
       .then(() => {
-        setIsLoading(false); // <- termina la carga
+        setIsLoading(false); 
         setEmailSent(true);
       })
       .catch(err => {
-        setIsLoading(false); // <- termina la carga aunque haya error
+        setIsLoading(false); 
         console.error(err);
         alert('Hubo un error enviando el mensaje.');
       });
