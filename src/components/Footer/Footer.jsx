@@ -147,12 +147,11 @@ const Footer = () => {
 
 
 
-
             <div className='container-phone'>
-              <p className="title-footer">Atencion al cliente </p>
+              <p className="title-footer"> Contactanos </p>
               <ul>
-                <li className='footer-contact' onClick={() => window.open('https://wa.me/3814190206', '_blank')}> Ventas: 3814190206 <FaWhatsapp /></li>
-                <li className='footer-contact' onClick={() => window.open('https://wa.me/3815052973', '_blank')}>  Admin: 3815052973 <FaWhatsapp /></li>
+                <li className='footer-contact' onClick={() => window.open('https://wa.me/3814190206', '_blank')}> <FaWhatsapp /> Ventas online: 3814190206 </li>
+                <li className='footer-contact' onClick={() => window.open('https://wa.me/3815052735', '_blank')}> <FaWhatsapp /> Atención al cliente: 3815052735 </li>
               </ul>
 
             </div>
